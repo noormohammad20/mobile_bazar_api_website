@@ -12,9 +12,21 @@
 
 </head>
 
-<body>
-    <h1>Mobile Bazar</h1>
+<body class="bg-light">
+    <main>
+        <!-- headline -->
+        <h1 class="text-center fs-1 text-info text-uppercase my-3">Mobile Bazar</h1>
+        <!-- search box -->
+        <div class="input-group mb-3 w-50 mx-auto">
+            <input id="text-field" type="text" class="form-control" placeholder="Search Mobile"
+                aria-label="Search Mobile" aria-describedby="button-addon2">
+            <button onclick="loadMobilesData()" class="btn btn-outline-secondary" type="button"
+                id="button-addon2">Button</button>
+        </div>
 
+
+
+    </main>
     <!-- bootstrap script cdn -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
