@@ -18,21 +18,36 @@ loadMobilesData()
 
 const displayMobileData = (mobiles) => {
     const mobileContainer = document.getElementById('mobile-container')
+    mobileContainer.textContent = ''
+
+
     mobiles.forEach(mobile => {
         const div = document.createElement('div')
         div.classList.add('col')
         div.innerHTML = `
-    <div class="card h-100">
-                    <img src="${mobile.image}" class="card-img-top w-50" alt="...">
-                    <div class="card-body">
-                     <h5 class="card-title">${mobile.brand}</h5>
-                      <h6>${mobile.phone_name}</h6>
-                     <button class="btn btn-outline-info text-dark">See Details</button>
-                    </div>
-                </div>
-    `
+            <div class="card h-100">
+                            <img src="${mobile.image}" class="card-img-top w-50" alt="...">
+                            <div class="card-body">
+                             <h5 class="card-title">${mobile.brand}</h5>
+                              <h6>${mobile.phone_name}</h6>
+                             <button onclick="loadDetails('${mobile.slug}')" class="btn btn-outline-info text-dark">See Details</button>
+                            </div>
+                        </div>
+            `
         mobileContainer.appendChild(div)
 
     })
 
 }
+
+// load mobile details
+
+const loadDetails = (mobileId) => {
+
+    const url = ` https://openapi.programming-hero.com/api/phone/${mobileId}`
+    fetch(url)
+        .then(res => res.json())
+        .then(data => displayDetails(data))
+}
+// display ditails
+
