@@ -66,12 +66,17 @@ const displayDetails = (details) => {
             </br>
             <div class="card-body">
             <h3 class="card-title">Release Date: ${details.data.releaseDate ? details.data.releaseDate : 'no realise date found'}</h3>
-            <h5>SENSORS</h5>
+            <h5>Main Features</h5>
             <hr>
-            <p>sensors: ${details.data.mainFeatures.sensors ? details.data.mainFeatures.sensors : 'no data found'}</P>
+            <p>Storage: ${details.data.mainFeatures.storage}</p>
+            <p>Display Size: ${details.data.mainFeatures.displaySize}</p>
+            <p>Chipset: ${details.data.mainFeatures.chipSet}</p>
+            <p>Memory: ${details.data.mainFeatures.memory}</p>
+              <p>sensors: ${details.data.mainFeatures.sensors ? details.data.mainFeatures.sensors : 'no data found'}</P>
              <h5>OTHERS</h5>
              <hr>
-            <p>WLAN:${details.data.others.WLAN ? details.data.others.WLAN : 'no data found'}</P>
+           
+             <p>WLAN:${details.data.others.WLAN ? details.data.others.WLAN : 'no data found'}</P>
             <p>Bluetooth: ${details.data.others.Bluetooth ? details.data.others.Bluetooth : 'no data found'}</P>
             <p>GPS: ${details.data.others.GPS ? details.data.others.GPS : 'no data found'}</P>
             <p>NFC: ${details.data.others.NFC ? details.data.others.NFC : 'no data found'}</P>
