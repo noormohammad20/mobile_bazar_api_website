@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="bg-light">
+<body class="bg-dark">
     <main>
         <!-- headline -->
         <h1 class="text-center fs-1 text-info text-uppercase my-3">Mobile Bazar</h1>
@@ -20,14 +20,16 @@
         <div class="input-group mb-3 w-50 mx-auto">
             <input id="text-field" type="text" class="form-control" placeholder="Search Mobile"
                 aria-label="Search Mobile" aria-describedby="button-addon2">
-            <button onclick="loadMobilesData()" class="btn btn-outline-info text-dark" type="button"
+            <button onclick="loadMobilesData()" class="btn btn-outline-info text-light" type="button"
                 id="button-addon2">Button</button>
         </div>
+
         <!-- error message -->
-        <div id="error"> </div>
+        <div id="error">
+            <p class="text-center text-danger "> * Mobile Not Found</p>
+        </div>
         <!-- display mobile details  -->
         <div id="mobile-details" class="d-flex justify-content-center align-items-center my-4">
-
         </div>
 
         <!-- display search result -->
