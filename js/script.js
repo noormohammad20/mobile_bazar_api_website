@@ -76,12 +76,12 @@ const displayDetails = (details) => {
              <h5>OTHERS</h5>
              <hr>
            
-             <p>WLAN:${details.data.others.WLAN ? details.data.others.WLAN : 'no data found'}</P>
-            <p>Bluetooth: ${details.data.others.Bluetooth ? details.data.others.Bluetooth : 'no data found'}</P>
-            <p>GPS: ${details.data.others.GPS ? details.data.others.GPS : 'no data found'}</P>
-            <p>NFC: ${details.data.others.NFC ? details.data.others.NFC : 'no data found'}</P>
-            <p>Radio: ${details.data.others.Radio ? details.data.others.Radio : 'no data found'}</P>
-            <p>USB: ${details.data.others.USB ? details.data.others.USB : 'no data found'}</P>
+             <p>WLAN:${details?.data?.others?.WLAN ? details.data.others.WLAN : 'no data found'}</P>
+            <p>Bluetooth: ${details?.data?.others?.Bluetooth ? details.data.others.Bluetooth : 'no data found'}</P>
+            <p>GPS: ${details?.data?.others?.GPS ? details.data.others.GPS : 'no data found'}</P>
+            <p>NFC: ${details?.data?.others?.NFC ? details.data.others.NFC : 'no data found'}</P>
+            <p>Radio: ${details?.data?.others?.Radio ? details.data.others.Radio : 'no data found'}</P>
+            <p>USB: ${details?.data?.others?.USB ? details.data.others.USB : 'no data found'}</P>
             </div >
             </div >
     `
